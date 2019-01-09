@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <title>PubSub</title>
+    <script src="./node_modules/socket.io-client/dist/socket.io.js"></script>
+    <script type="text/javascript">
+    function fetch() {
+        var sock = io("http://localhost:8080");
+        sock.on('foo', function(msg) {
+            console.log(msg);
+        });
+    }
+    </script>
+</head>
+
+<body onload="fetch()">
+</body>
+
+</html>
